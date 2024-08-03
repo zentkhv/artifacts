@@ -1,3 +1,4 @@
+# Библиотеки
 import time
 import threading
 import requests
@@ -6,10 +7,13 @@ from pygments import highlight, lexers, formatters
 from datetime import datetime, timedelta
 import pytz
 
-vladivostok_tz = pytz.timezone('Asia/Vladivostok')
+# Локальные скрипты
+import credentials
 
-token = ("eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InplbnRraHYiLCJwYXNzd29yZF9jaGFuZ2VkIjoiIn0"
-         ".0Y8A8hGstLr6PTXburRchC-CXzhCzZff7o7H3HkNNb4")
+
+# Глобальные объекты
+vladivostok_tz = pytz.timezone('Asia/Vladivostok')
+token = credentials.token
 
 headers = {
     "Content-Type": "application/json",
@@ -32,6 +36,7 @@ places = {
 }
 
 
+# Методы
 def get_url(char: str, action: str):
     # if char == "characters":
     #     return f"https://api.artifactsmmo.com/my/{char}"
