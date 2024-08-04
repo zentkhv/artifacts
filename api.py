@@ -24,11 +24,11 @@ headers = {
 # }
 
 chars = {  # fight gathering
-    # 'Zent': 'Cooper Rocks',
+    'Zent': 'Red Slime',
     'MKS': 'Cooper Rocks',
     'Markiz': 'Cooper Rocks',
     'Belka': 'Cooper Rocks',
-    'Witcher': 'Chicken'
+    'Witcher': 'Cooper Rocks'
 }
 
 targets = {

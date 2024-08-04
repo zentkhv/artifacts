@@ -28,17 +28,17 @@ if __name__ == "__main__":
     #     for character in chars.keys():
     #         executor.submit(work_loop, character)
 
-    threads = []
-    for character in chars.keys():
-        thread = threading.Thread(target=work_loop, args=(character,))
-        threads.append(thread)
-        thread.start()
-        print(f"{character} started")
+    # threads = []
+    # for character in chars.keys():
+    #     thread = threading.Thread(target=work_loop, args=(character,))
+    #     threads.append(thread)
+    #     thread.start()
+    #     print(f"{character} started")
 
     # DEPOSIT ITEMS
-    # with ThreadPoolExecutor(max_workers=10) as executor:
-    #     for character in get_chars_info():
-    #         executor.submit(deposit_items, character)
+    with ThreadPoolExecutor(max_workers=10) as executor:
+        for character in get_chars_info():
+            executor.submit(deposit_items, character)
 
     # for thread in threads:  # Ожидание завершения всех потоков
     #     thread.join()
